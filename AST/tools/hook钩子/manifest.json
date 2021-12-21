@@ -1,0 +1,21 @@
+{
+   "name": "Injection",
+    "version": "2.0",
+    "description": "RequestHeader钩子",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                 "http://*/*", "https://*/*", "<all_urls>"
+            ],
+            "js": [
+              "hook_cookie.js"
+            ],
+            "all_frames": true,
+            "permissions": [
+                "tabs"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
